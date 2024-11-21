@@ -1,52 +1,36 @@
-# Descripción del proyecto
-Este proyecto implica la extracción y transformación de datos desde un archivo de Excel con múltiples hojas de cálculo. Cada hoja se exporta como un archivo CSV independiente para su posterior análisis y procesamiento.
+### Resumen del Proyecto
 
-### Detalles del archivo de entrada
-El archivo de origen contiene las siguientes hojas de cálculo:
-- `Acc_vel_loc_sinrangos`
-- `Velocidad_sin_Rangos`
-- `Accesos_tecnologia_localidad`
-- `Velocidad % por prov`
-- `Totales VMD`
-- `Totales Accesos Por Tecnología`
-- `Accesos Por Tecnología`
-- `Penetración-poblacion`
-- `Penetracion-hogares`
-- `Penetracion-totales`
-- `Totales Accesos por rango`
-- `Accesos por rangos`
-- `Dial-BAf`
-- `Totales Dial-BAf`
-- `Ingresos `
+#### Descripción General
+Este proyecto consistió en la extracción y transformación de datos desde un archivo de Excel con múltiples hojas. Cada hoja se exportó como un archivo CSV independiente para su análisis posterior.
 
-### Proceso de exportación
-Se ha implementado un script de Python que:
-1. Carga el archivo de Excel.
-2. Itera sobre cada hoja de cálculo.
-3. Exporta cada hoja a un archivo CSV en la ruta especificada: `C:/Users/maron.LAPTOP-UEJMOSD4/Desktop/PI_2/DATA_LIMPIO`.
+#### Proceso Realizado
+1. **Extracción de Hojas**: Se utilizaron scripts en Python para iterar por las hojas del archivo Excel y exportarlas como CSV.
+2. **Transformación de Datos**: 
+   - Las columnas clave fueron ajustadas a formatos adecuados para análisis (fechas, períodos trimestrales, entre otros).
+   - Se manejaron valores nulos y formatos inconsistentes.
+3. **Análisis Exploratorio de Datos (EDA)**:
+   - Exploración inicial con herramientas como `.info()` y `.describe()`.
+   - Visualización de correlaciones con mapas de calor.
+   - Análisis de tendencias por provincia, tecnología y período.
 
-### Archivos CSV generados
-Los archivos resultantes se guardaron correctamente y se nombraron según la hoja de cálculo original:
-- `Acc_vel_loc_sinrangos.csv`
-- `Velocidad_sin_Rangos.csv`
-- `Accesos_tecnologia_localidad.csv`
-- `Velocidad % por prov.csv`
-- `Totales VMD.csv`
-- `Totales Accesos Por Tecnología.csv`
-- `Accesos Por Tecnología.csv`
-- `Penetración-poblacion.csv`
-- `Penetracion-hogares.csv`
-- `Penetracion-totales.csv`
-- `Totales Accesos por rango.csv`
-- `Accesos por rangos.csv`
-- `Dial-BAf.csv`
-- `Totales Dial-BAf.csv`
-- `Ingresos .csv`
+#### Principales Resultados
+- **Distribución Regional**: Buenos Aires y CABA lideran en accesos a tecnologías como Cablemodem y Fibra óptica.
+- **Tendencias Tecnológicas**: Cablemodem y Fibra óptica muestran un crecimiento destacado, mientras ADSL y Wireless están en declive.
+- **Correlaciones**: Relación significativa entre tecnologías avanzadas y mayores velocidades de bajada.
 
-### Consideraciones
-- Se recomienda verificar que la ruta de destino (`C:/Users/maron.LAPTOP-UEJMOSD4/Desktop/PI_2/DATA_LIMPIO`) exista antes de ejecutar el script.
-- Las barras invertidas en las rutas deben estar correctamente escapadas (o se debe usar `r"..."` para evitar errores de Unicode).
+#### Archivos de Entrada y Salida
+- Archivos Excel procesados: Hojas como `Accesos por Tecnología`, `Velocidad % por prov` y más.
+- Archivos CSV generados: Ej. `Penetracion-hogares.csv`, `Totales VMD.csv`.
 
-### Próximos pasos
-El análisis de los archivos CSV generados puede continuar con herramientas como Pandas para manipulación de datos y Power BI para visualizaciones.
+#### Próximos Pasos
+- Análisis temporal detallado para identificar tendencias en accesos por tecnología.
+- Generación de visualizaciones avanzadas en herramientas como Power BI para presentar hallazgos.
 
+#### Requisitos Técnicos
+Librerías utilizadas:
+```bash
+pip install pandas matplotlib seaborn
+```
+
+#### Conclusión
+Este proyecto proporciona una base sólida para comprender la distribución y evolución del acceso a tecnologías en distintas regiones. Las herramientas desarrolladas facilitan el análisis continuo y permiten decisiones informadas basadas en datos.
