@@ -1,7 +1,9 @@
 ### Resumen del Proyecto
 
 #### Descripción General
-Este proyecto consistió en la extracción y transformación de datos desde un archivo de Excel con múltiples hojas. Cada hoja se exportó como un archivo CSV independiente para su análisis posterior.
+
+el siguiente proyecto busca mostrar valor en una serie de datos relacionados con las telecomunicaciones, específicamente el sector de la prestación de servicio de internet en Argentina. Los datos permitirán mostrar tendencias y oportunidades de inversión y crecimiento en este sector para las empresas de telecomunicaciones.
+
 
 #### Proceso Realizado
 1. **Extracción de Hojas**: Se utilizaron scripts en Python para iterar por las hojas del archivo Excel y exportarlas como CSV.
@@ -11,7 +13,8 @@ Este proyecto consistió en la extracción y transformación de datos desde un a
 3. **Análisis Exploratorio de Datos (EDA)**:
    - Exploración inicial con herramientas como `.info()` y `.describe()`.
    - Visualización de correlaciones con mapas de calor.
-   - Análisis de tendencias por provincia, tecnología y período.
+   - Análisis de tendencias por provincia, tecnología, acceso y período.
+   - Dashboard: se seleccionaron algunos CSV generados en la transformación y exploración de datos.
 
 #### Principales Resultados
 - **Distribución Regional**: Buenos Aires y CABA lideran en accesos a tecnologías como Cablemodem y Fibra óptica.
